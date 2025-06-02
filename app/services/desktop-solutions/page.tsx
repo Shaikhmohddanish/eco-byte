@@ -23,7 +23,6 @@ import {
   Gamepad2,
 } from "lucide-react"
 import { useState, useEffect } from "react"
-import Link from "next/link"
 import Footer from "@/components/ui/footer"
 import Header from "@/components/ui/header"
 
@@ -337,7 +336,7 @@ export default function DesktopSolutionsPage() {
 
       <div className="fixed bottom-6 right-6 z-50">
         <a
-          href="https://wa.me/919326620089?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20desktop%20solutions"
+          href="https://wa.me/919326620089?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20laptop%20services"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-14 h-14 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"

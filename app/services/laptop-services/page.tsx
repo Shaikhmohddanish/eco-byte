@@ -114,7 +114,7 @@ export default function LaptopServicesPage() {
                   <Phone className="mr-2 h-5 w-5" />
                   Call: 9326620089
                 </Button>
-                <Button size="lg" variant="outline" className="border-gray-300 hover:bg-gray-50">
+                <Button size="lg" variant="outline" className="border-gray-300 text-gray-900 hover:bg-gray-50">
                   Get Free Quote
                 </Button>
               </div>
@@ -278,7 +278,7 @@ export default function LaptopServicesPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-gray-900"
+                className="border-white text-gray-900 hover:bg-white hover:text-gray-900"
               >
                 Get Free Quote
               </Button>

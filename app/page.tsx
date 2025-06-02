@@ -218,7 +218,7 @@ export default function HomePage() {
                 <Phone className="mr-2 h-5 w-5" />
                 Call: 9326620089
               </Button>
-              <Button size="lg" variant="outline" className="border-gray-300 hover:bg-gray-50 text-base px-8">
+              <Button size="lg" variant="outline" className="border-gray-300 text-gray-900 hover:bg-gray-50 text-base px-8">
                 <Mail className="mr-2 h-5 w-5" />
                 Get Free Quote
               </Button>
