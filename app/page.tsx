@@ -24,6 +24,7 @@ import {
 import { useState } from "react"
 import Link from "next/link"
 import Footer from "@/components/ui/footer"
+import Header from "@/components/ui/header"
 
 export default function HomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -92,78 +93,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-white shadow-lg border-b border-gray-100 sticky top-0 z-50">
-        <div className="container mx-auto px-4 lg:px-6">
-          <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* logo section start */}
-            <Link
-              href="/"
-              className="flex items-center space-x-3 lg:space-x-4"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              <div className="w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center">
-                <img src="/logo.png" alt="Eco-Byte Solution Logo" className="w-full h-full object-contain" />
-              </div>
-              <div>
-                <h1 className="text-lg lg:text-2xl font-bold text-gray-900 tracking-tight">ECO-BYTE SOLUTION</h1>
-                <p className="text-xs lg:text-sm text-gray-600 font-medium">WHOLESALE AND RETAIL</p>
-              </div>
-            </Link>
-            {/* logo section end */}
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              <nav className="flex items-center space-x-6">
-                <a href="#services" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors">
-                  Services
-                </a>
-                <a href="#brands" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors">
-                  Brands
-                </a>
-                <a href="#contact" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors">
-                  Contact
-                </a>
-              </nav>
-              <div className="flex items-center space-x-2 text-sm font-medium text-gray-700">
-                <Phone className="h-4 w-4 text-emerald-600" />
-                <span>9326620089</span>
-              </div>
-              <Button className="bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white shadow-lg">
-                Get Quote
-              </Button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button className="lg:hidden p-2 text-gray-700" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
-
-          {/* Mobile Menu */}
-          {mobileMenuOpen && (
-            <div className="lg:hidden border-t border-gray-100 py-4">
-              <nav className="flex flex-col space-y-4">
-                <a href="#services" className="text-gray-700 hover:text-emerald-600 font-medium">
-                  Services
-                </a>
-                <a href="#brands" className="text-gray-700 hover:text-emerald-600 font-medium">
-                  Brands
-                </a>
-                <a href="#contact" className="text-gray-700 hover:text-emerald-600 font-medium">
-                  Contact
-                </a>
-                <div className="flex items-center space-x-2 text-sm font-medium text-gray-700 pt-2 border-t border-gray-100">
-                  <Phone className="h-4 w-4 text-emerald-600" />
-                  <span>9326620089</span>
-                </div>
-                <Button className="bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white w-full">
-                  Get Quote
-                </Button>
-              </nav>
-            </div>
-          )}
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-50 via-cyan-50 to-emerald-50 py-12 lg:py-24">
@@ -214,11 +144,15 @@ export default function HomePage() {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white shadow-lg text-base px-8"
+                onClick={() => window.location.href = 'tel:9326620089'}
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Call: 9326620089
               </Button>
-              <Button size="lg" variant="outline" className="border-gray-300 text-gray-900 hover:bg-gray-50 text-base px-8">
+              <Button size="lg" variant="outline" 
+                className="border-gray-300 text-gray-900 hover:bg-gray-50 text-base px-8"
+                onClick={() => window.location.href = 'tel:9326620089'}
+                >
                 <Mail className="mr-2 h-5 w-5" />
                 Get Free Quote
               </Button>

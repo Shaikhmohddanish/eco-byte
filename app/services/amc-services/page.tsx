@@ -136,11 +136,17 @@ export default function AMCServicesPage() {
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white shadow-lg"
+                  onClick={() => window.location.href = "tel:9326620089"}
                 >
                   <Phone className="mr-2 h-5 w-5" />
                   Call: 9326620089
                 </Button>
-                <Button size="lg" variant="outline" className="border-gray-300 hover:bg-gray-50">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-gray-300 hover:bg-gray-50"
+                  onClick={() => alert('AMC quote request submitted!')}
+                >
                   Get Free AMC Quote
                 </Button>
               </div>
