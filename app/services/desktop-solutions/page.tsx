@@ -139,7 +139,7 @@ export default function DesktopSolutionsPage() {
                 alt="Custom Desktop PC Build"
                 className="rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-4 shadow-lg">
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
                     <Shield className="h-6 w-6 text-emerald-600" />

@@ -174,78 +174,79 @@ export default function ComputerRepairPage() {
       <Header />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-50 via-cyan-50 to-emerald-50 py-12 lg:py-20">
-        <div className="container mx-auto px-4 lg:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            <div>
-              <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 mb-6 shadow-sm">
-                <Wrench className="h-4 w-4 text-emerald-600" />
-                <span className="text-sm font-medium text-gray-700">Professional Computer Repair</span>
-              </div>
+  <div className="container mx-auto px-4 lg:px-6">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <div>
+        <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 mb-6 shadow-sm">
+          <Wrench className="h-4 w-4 text-emerald-600" />
+          <span className="text-sm font-medium text-gray-700">Professional Computer Repair</span>
+        </div>
 
-              <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Expert
-                <span className="bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">
-                  {" "}
-                  Computer Repair
-                </span>{" "}
-                Services
-              </h1>
+        <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          Expert
+          <span className="bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">
+            {" "}Computer Repair
+          </span>
+          {" "}Services
+        </h1>
 
-              <p className="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
-                Fast, reliable computer repair services in Mumbai. From hardware failures to software issues, our
-                certified technicians can fix any computer problem with a 30-day warranty guarantee.
-              </p>
+        <p className="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
+          Fast, reliable computer repair services in Mumbai. From hardware failures to software issues, our
+          certified technicians can fix any computer problem with a 30-day warranty guarantee.
+        </p>
 
-              <div className="flex flex-wrap gap-3 mb-8">
-                <Badge className="bg-emerald-100 text-emerald-700 border-emerald-200">
-                  <Clock className="h-3 w-3 mr-1" />
-                  24-48 Hour Service
-                </Badge>
-                <Badge className="bg-cyan-100 text-cyan-700 border-cyan-200">
-                  <Shield className="h-3 w-3 mr-1" />
-                  30-Day Warranty
-                </Badge>
-                <Badge className="bg-gray-100 text-gray-700 border-gray-200">
-                  <CheckCircle className="h-3 w-3 mr-1" />
-                  Free Diagnosis
-                </Badge>
-              </div>
+        <div className="flex flex-wrap gap-3 mb-8">
+          <Badge className="bg-emerald-100 text-emerald-700 border-emerald-200">
+            <Clock className="h-3 w-3 mr-1" />
+            24-48 Hour Service
+          </Badge>
+          <Badge className="bg-cyan-100 text-cyan-700 border-cyan-200">
+            <Shield className="h-3 w-3 mr-1" />
+            30-Day Warranty
+          </Badge>
+          <Badge className="bg-gray-100 text-gray-700 border-gray-200">
+            <CheckCircle className="h-3 w-3 mr-1" />
+            Free Diagnosis
+          </Badge>
+        </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white shadow-lg"
-                >
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call: 9326620089
-                </Button>
-                <Button size="lg" variant="outline" className="border-gray-300 hover:bg-gray-50">
-                  Get Free Diagnosis
-                </Button>
-              </div>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Button
+            size="lg"
+            className="bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white shadow-lg"
+          >
+            <Phone className="mr-2 h-5 w-5" />
+            Call: 9326620089
+          </Button>
+          <Button size="lg" variant="outline" className="border-gray-300 hover:bg-gray-50">
+            Get Free Diagnosis
+          </Button>
+        </div>
+      </div>
+
+      <div className="relative">
+        <img
+          src="/placeholder.svg?height=400&width=600"
+          alt="Computer Repair Services"
+          className="rounded-2xl shadow-2xl"
+        />
+        {/* Change right to left here: */}
+        <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg">
+          <div className="flex items-center space-x-3">
+            <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+              <Award className="h-6 w-6 text-emerald-600" />
             </div>
-
-            <div className="relative">
-              <img
-                src="/placeholder.svg?height=400&width=600"
-                alt="Computer Repair Services"
-                className="rounded-2xl shadow-2xl"
-              />
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-4 shadow-lg">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
-                    <Award className="h-6 w-6 text-emerald-600" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">Expert Technicians</p>
-                    <p className="text-sm text-gray-600">10+ Years Experience</p>
-                  </div>
-                </div>
-              </div>
+            <div>
+              <p className="font-semibold text-gray-900">Expert Technicians</p>
+              <p className="text-sm text-gray-600">10+ Years Experience</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Repair Services */}
       <section className="py-16 lg:py-24 bg-white">
