@@ -218,7 +218,7 @@ export default function CCTVInstallationPage() {
 
             <div className="relative">
               <img
-                src="/placeholder.svg?height=400&width=600"
+                src="/images/cctv.jpg?height=400&width=600"
                 alt="CCTV Installation Services"
                 className="rounded-2xl shadow-2xl"
               />

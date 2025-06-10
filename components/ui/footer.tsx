@@ -30,6 +30,9 @@ export default function Footer() {
               <Link href="/services/laptop-services">
                 <li className="hover:text-white transition-colors cursor-pointer">Laptop & Desktop Sales</li>
               </Link>
+              <Link href="/services/desktop-solutions">
+                <li className="hover:text-white transition-colors cursor-pointer">Desktop Solutions</li>
+              </Link>
               <Link href="/services/computer-repair">
                 <li className="hover:text-white transition-colors cursor-pointer">Computer Repair</li>
               </Link>

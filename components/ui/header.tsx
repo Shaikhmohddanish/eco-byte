@@ -5,6 +5,7 @@ import { Button } from "./button";
 
 const serviceLinks = [
   { href: "/services/laptop-services", label: "Laptop & Desktop Sales" },
+  { href: "/services/desktop-solutions", label: "Desktop Solutions" },
   { href: "/services/computer-repair", label: "Computer Repair" },
   { href: "/services/cctv-installation", label: "CCTV Installation" },
   { href: "/services/server-solutions", label: "Server Solutions" },

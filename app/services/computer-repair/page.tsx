@@ -226,7 +226,7 @@ export default function ComputerRepairPage() {
 
       <div className="relative">
         <img
-          src="/placeholder.svg?height=400&width=600"
+          src="/images/9.jpeg?height=400&width=600"
           alt="Computer Repair Services"
           className="rounded-2xl shadow-2xl"
         />

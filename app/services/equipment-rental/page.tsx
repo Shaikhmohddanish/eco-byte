@@ -155,7 +155,7 @@ export default function EquipmentRentalPage() {
             </div>
             <div className="relative">
               <img
-                src="/placeholder.svg?height=400&width=600"
+                src="/images/4.jpeg?height=400&width=600"
                 alt="Equipment Rental"
                 className="rounded-2xl shadow-2xl"
               />

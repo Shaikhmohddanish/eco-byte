@@ -135,7 +135,7 @@ export default function DesktopSolutionsPage() {
 
             <div className="relative">
               <img
-                src="/placeholder.svg?height=400&width=600"
+                src="/images/6.jpeg?height=400&width=600"
                 alt="Custom Desktop PC Build"
                 className="rounded-2xl shadow-2xl"
               />
@@ -311,7 +311,7 @@ export default function DesktopSolutionsPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-gray-900"
+                className="border-white text-black hover:bg-white hover:text-gray-900"
               >
                 Get Custom Quote
               </Button>
