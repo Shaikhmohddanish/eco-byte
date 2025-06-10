@@ -153,7 +153,7 @@ export default function AMCServicesPage() {
             </div>
             <div className="relative">
               <img
-                src="/images/7.jpeg?height=400&width=600"
+                src="/images/amc.jpeg?height=400&width=600"
                 alt="AMC Solutions"
                 className="rounded-2xl shadow-2xl"
               />
