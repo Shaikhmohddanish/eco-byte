@@ -25,6 +25,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Footer from "@/components/ui/footer"
 import Header from "@/components/ui/header"
+import Head from "next/head"
 
 export default function ServerSolutionsPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -177,7 +178,66 @@ export default function ServerSolutionsPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <Head>
+        <title>Server Solutions in Mumbai | Eco-Byte Solution</title>
+        <meta name="description" content="Professional server setup, maintenance, and support in Mumbai. Secure, scalable, and reliable server solutions for businesses by Eco-Byte Solution." />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Server Solutions in Mumbai | Eco-Byte Solution" />
+        <meta property="og:description" content="Professional server setup, maintenance, and support in Mumbai. Secure, scalable, and reliable server solutions for businesses." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://eco-byte.com/services/server-solutions" />
+        <meta property="og:image" content="/images/server.jpeg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Server Solutions in Mumbai | Eco-Byte Solution" />
+        <meta name="twitter:description" content="Professional server setup, maintenance, and support in Mumbai. Secure, scalable, and reliable server solutions for businesses by Eco-Byte Solution." />
+        <meta name="twitter:image" content="/images/server.jpeg" />
+        {/* JSON-LD Structured Data for Service */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Service',
+              name: 'Server Solutions',
+              description: 'Professional server setup, maintenance, and support in Mumbai. Secure, scalable, and reliable server solutions for businesses by Eco-Byte Solution.',
+              provider: {
+                '@type': 'Organization',
+                name: 'Eco-Byte Solution',
+                url: 'https://eco-byte.com',
+                logo: 'https://eco-byte.com/logo.png',
+                contactPoint: {
+                  '@type': 'ContactPoint',
+                  telephone: '+91-9326620089',
+                  contactType: 'customer service',
+                  areaServed: 'IN',
+                  availableLanguage: ['English', 'Hindi']
+                },
+                address: {
+                  '@type': 'PostalAddress',
+                  streetAddress: 'Shop No. 2, Plot No. 6, Sector 2, Airoli',
+                  addressLocality: 'Navi Mumbai',
+                  addressRegion: 'Maharashtra',
+                  postalCode: '400708',
+                  addressCountry: 'IN'
+                }
+              },
+              areaServed: 'Mumbai, Navi Mumbai, Thane',
+              serviceType: 'Server Solutions',
+              url: 'https://eco-byte.com/services/server-solutions',
+              image: 'https://eco-byte.com/images/server.jpeg',
+              offers: {
+                '@type': 'Offer',
+                priceCurrency: 'INR',
+                availability: 'https://schema.org/InStock',
+                url: 'https://eco-byte.com/services/server-solutions',
+                eligibleRegion: 'IN'
+              }
+            })
+          }}
+        />
+      </Head>
+
       {/* Header */}
       <Header/>
 
@@ -482,6 +542,6 @@ export default function ServerSolutionsPage() {
           </svg>
         </a>
       </div>
-    </div>
+    </>
   )
 }
