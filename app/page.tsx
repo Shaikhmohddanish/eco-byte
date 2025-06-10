@@ -23,6 +23,7 @@ import {
 } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
+import Header from "@/components/ui/header"
 
 export default function HomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -47,7 +48,7 @@ export default function HomePage() {
       title: "Server & Workstation",
       description: "Enterprise-grade servers and high-performance workstations for demanding business applications",
       features: ["Server Setup", "Network Configuration", "Workstation Builds", "Enterprise Solutions"],
-      image: "3.jpeg",
+      image: "server.jpeg",
     },
     {
       icon: <Camera className="h-8 w-8" />,
@@ -61,7 +62,7 @@ export default function HomePage() {
       title: "AMC Services",
       description: "Comprehensive annual maintenance contracts ensuring optimal performance of your IT infrastructure",
       features: ["Preventive Maintenance", "Priority Support", "Regular Checkups", "Cost Savings"],
-      image: "4.jpeg",
+      image: "amc.jpeg",
     },
     {
       icon: <ShoppingCart className="h-8 w-8" />,
@@ -73,18 +74,18 @@ export default function HomePage() {
   ]
 
   const brands = [
-    "HP",
-    "Apple",
-    "Dell",
-    "Sony",
-    "Samsung",
-    "Gateway",
-    "Lenovo",
-    "Toshiba",
-    "ASUS",
-    "AMD Ryzen",
-    "GeForce RTX",
-    "Compaq",
+    { name: "HP", image: "/logos/hp.png" },
+    { name: "Apple", image: "/logos/apple.png" },
+    { name: "Dell", image: "/logos/dell.png" },
+    { name: "Sony", image: "/logos/sony.png" },
+    { name: "Samsung", image: "/logos/samsung.png" },
+    { name: "Gateway", image: "/logos/gateway.svg" },
+    { name: "Lenovo", image: "/logos/lenovo.png" },
+    { name: "Toshiba", image: "/logos/toshiba.png" },
+    { name: "ASUS", image: "/logos/asus.svg" },
+    { name: "AMD Ryzen", image: "/logos/amd ryzen.svg" },
+    { name: "GeForce RTX", image: "/logos/getforce rtx.png" },
+    { name: "Compaq", image: "/logos/compaq.png" },
   ]
 
   const stats = [
@@ -97,78 +98,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-white shadow-lg border-b border-gray-100 sticky top-0 z-50">
-        <div className="container mx-auto px-4 lg:px-6">
-          <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* logo section start */}
-            <Link
-              href="/"
-              className="flex items-center space-x-3 lg:space-x-4"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              <div className="w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center">
-                <img src="/logo.png" alt="Eco-Byte Solution Logo" className="w-full h-full object-contain" />
-              </div>
-              <div>
-                <h1 className="text-lg lg:text-2xl font-bold text-gray-900 tracking-tight">ECO-BYTE SOLUTION</h1>
-                <p className="text-xs lg:text-sm text-gray-600 font-medium">WHOLESALE AND RETAIL</p>
-              </div>
-            </Link>
-            {/* logo section end */}
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              <nav className="flex items-center space-x-6">
-                <a href="#services" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors">
-                  Services
-                </a>
-                <a href="#brands" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors">
-                  Brands
-                </a>
-                <a href="#contact" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors">
-                  Contact
-                </a>
-              </nav>
-              <div className="flex items-center space-x-2 text-sm font-medium text-gray-700">
-                <Phone className="h-4 w-4 text-emerald-600" />
-                <span>9326620089</span>
-              </div>
-              <Button className="bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white shadow-lg">
-                Get Quote
-              </Button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button className="lg:hidden p-2 text-gray-700" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
-
-          {/* Mobile Menu */}
-          {mobileMenuOpen && (
-            <div className="lg:hidden border-t border-gray-100 py-4">
-              <nav className="flex flex-col space-y-4">
-                <a href="#services" className="text-gray-700 hover:text-emerald-600 font-medium">
-                  Services
-                </a>
-                <a href="#brands" className="text-gray-700 hover:text-emerald-600 font-medium">
-                  Brands
-                </a>
-                <a href="#contact" className="text-gray-700 hover:text-emerald-600 font-medium">
-                  Contact
-                </a>
-                <div className="flex items-center space-x-2 text-sm font-medium text-gray-700 pt-2 border-t border-gray-100">
-                  <Phone className="h-4 w-4 text-emerald-600" />
-                  <span>9326620089</span>
-                </div>
-                <Button className="bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white w-full">
-                  Get Quote
-                </Button>
-              </nav>
-            </div>
-          )}
-        </div>
-      </header>
+      <Header/>
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-50 via-cyan-50 to-emerald-50 py-12 lg:py-24">
@@ -313,12 +243,17 @@ export default function HomePage() {
 
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 lg:gap-8">
             {brands.map((brand, index) => (
-              <div key={index} className="group">
+              <div key={index} className="group flex flex-col items-center justify-center">
                 <div className="bg-gray-50 hover:bg-gradient-to-br hover:from-emerald-50 hover:to-cyan-50 rounded-xl p-4 lg:p-6 h-20 lg:h-24 flex items-center justify-center transition-all duration-300 border border-gray-100 hover:border-emerald-200 hover:shadow-lg">
-                  <span className="font-bold text-gray-700 group-hover:text-emerald-700 text-xs lg:text-sm text-center transition-colors">
-                    {brand}
-                  </span>
+                  <img
+                    src={brand.image}
+                    alt={brand.name + ' logo'}
+                    className="max-h-12 max-w-[90px] object-contain mx-auto"
+                  />
                 </div>
+                <span className="font-bold text-gray-700 group-hover:text-emerald-700 text-xs lg:text-sm text-center transition-colors mt-2">
+                  {brand.name}
+                </span>
               </div>
             ))}
           </div>
