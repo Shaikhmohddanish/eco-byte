@@ -57,20 +57,21 @@ export default function Header() {
                   Services
                   <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${servicesDropdownOpen ? "rotate-180" : ""}`} />
                 </button>
-                {/* Dropdown Menu */}
+                {/* Dropdown Menu - Added negative margin to eliminate gap */}
                 <div
-                  className={`absolute left-0 mt-2 w-56 rounded-xl bg-white shadow-lg border border-gray-100 py-2 z-50 ${servicesDropdownOpen ? "block" : "hidden"}`}
+                  className={`absolute left-0 mt-0 pt-5 w-56 z-50 ${servicesDropdownOpen ? "block" : "hidden"}`}
                 >
-                  {serviceLinks.map((s) => (
-                    <Link
-                      key={s.href}
-                      href={s.href}
-                      className="block px-5 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
-                      onClick={() => setServicesDropdownOpen(false)}
-                    >
-                      {s.label}
-                    </Link>
-                  ))}
+                  <div className="rounded-xl bg-white shadow-lg border border-gray-100 py-2">
+                    {serviceLinks.map((s) => (
+                      <Link
+                        key={s.href}
+                        href={s.href}
+                        className="block px-5 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
+                      >
+                        {s.label}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
               {/* Smooth-scroll links */}
