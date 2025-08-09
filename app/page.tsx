@@ -25,9 +25,14 @@ import { useState } from "react"
 import Link from "next/link"
 import Header from "@/components/ui/header"
 import Footer from "@/components/ui/footer"
+import { useFormSubmit } from "@/hooks/use-form-submit"
 
 export default function HomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  
+  const { loading, message, error, submitForm } = useFormSubmit(
+    "https://script.google.com/macros/s/AKfycbxmGK5Ct9wzFUR53tCC8crbejUIK1cSDAEl3F2iD_b9gLj9XFsO1y6oLrv7yReSP8_jDg/exec"
+  )
 
   const services = [
     {
@@ -315,25 +320,35 @@ export default function HomePage() {
 
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 lg:p-8 border border-white/20">
               <h4 className="text-2xl lg:text-3xl font-bold mb-6">Request a Quote</h4>
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={submitForm}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input
                     type="text"
+                    name="name"
                     placeholder="Your Name"
                     className="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 placeholder-white/70 text-white backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-white/50"
+                    required
                   />
                   <input
                     type="tel"
+                    name="phone"
                     placeholder="Phone Number"
                     className="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 placeholder-white/70 text-white backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-white/50"
+                    required
                   />
                 </div>
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email Address"
                   className="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 placeholder-white/70 text-white backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-white/50"
+                  required
                 />
-                <select className="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 text-white backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-white/50">
+                <select 
+                  name="service"
+                  className="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 text-white backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-white/50"
+                  required
+                >
                   <option value="" className="text-gray-900">
                     Select Service
                   </option>
@@ -357,13 +372,24 @@ export default function HomePage() {
                   </option>
                 </select>
                 <textarea
+                  name="message"
                   placeholder="Describe your requirements..."
                   rows={4}
                   className="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 placeholder-white/70 text-white resize-none backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-white/50"
+                  required
                 ></textarea>
-                <Button className="w-full bg-white text-gray-900 hover:bg-gray-100 font-semibold py-3 rounded-xl text-base">
-                  Send Inquiry
+                <Button 
+                  type="submit" 
+                  className="w-full bg-white text-gray-900 hover:bg-gray-100 font-semibold py-3 rounded-xl text-base"
+                  disabled={loading}
+                >
+                  {loading ? 'Sending...' : 'Send Inquiry'}
                 </Button>
+                {message && (
+                  <div className={`text-center p-3 rounded-xl ${error ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`}>
+                    {message}
+                  </div>
+                )}
               </form>
             </div>
           </div>
